@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body style="background-color: rgb(246, 246, 246);">
+   <nav class="dashboard-nav">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="/res/sluLogo.svg" alt="SLU Logo" class="logo">
+            <span class="logo-text">TRIL Lab Reservation</span>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-page="dashboard">
+                Dashboard
+            </button>
+            <button class="nav-btn" data-page="viewRooms">
+                 View Rooms
+            </button>
+            <button class="nav-btn" data-page="reservation">
+                 New Reservation
+            </button>
+        </div>
+
+        <div class="nav-profile">
+            <div class="user-info">
+                <span class="user-name">Username</span>
+                <span class="user-role">Student</span>
+            </div>
+            <div class="profile-dropdown">
+                <div class="profile-icon" id="profileIcon">👤</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main class="dashboard-main">
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h1>Student Dashboard</h1>
+                <p>Welcome back, User!</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Reservations</h3>
+                    <p class="stat-number">1</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Pending Approval</h3>
+                    <p class="stat-number">3</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Total Approved</h3>
+                    <p class="stat-number">2</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Rejected Requests</h3>
+                    <p class="stat-number">2</p>
+                </div>
+            </div>
+
+            <!--reservation history -->
+          <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Reservations</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                
+                <div class="reservations-table-container">
+                    <table class="reservations-table">
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>Purpose</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D420</span>
+                                    </div>
+                                </td>
+                                <td>Group Project</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 12, 2024</span>
+                                        <span class="time">2:00 PM - 4:00 PM</span>
+                                    </div>
+                                </td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn" onclick="editReservation(1)">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D421</span>
+                                    </div>
+                                </td>
+                                <td>Research Project</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 13, 2024</span>
+                                        <span class="time">9:00 AM - 11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn" onclick="editReservation(2)">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D422</span>
+                                    </div>
+                                </td>
+                                <td>Group Study</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 15, 2024</span>
+                                        <span class="time">1:00 PM - 3:00 PM</span>
+                                    </div>
+                                </td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn" onclick="editReservation(3)">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D423</span>
+                                    </div>
+                                </td>
+                                <td>PSC Online Pitching</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 16, 2024</span>
+                                        <span class="time">10:00 AM - 12:00 PM</span>
+                                    </div>
+                                </td>
+                                <td><span class="status cancelled">Cancelled</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn disabled" disabled>Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../javascript/navigation.js"></script>
+</body>
+</html>

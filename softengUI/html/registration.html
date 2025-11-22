@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body style="background-color: rgb(236, 246, 255);">
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-container">
+                    <img src="/res/sluLogo.svg" class="logo">
+                </div>
+                <h2>Create an Account</h2>
+                <p>Register with your SLU Gsuite Account</p>
+            </div>
+            
+            <form class="login-form" id="registerForm">
+
+                <div class="input-group">
+                    <label>I am a:</label>
+                    <div class="user-type-buttons">
+                        <button type="button" class="user-type-btn " data-type="student">
+                            Student
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="faculty">
+                            Instructor
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="supervisor">
+                            TRIL Supervisor
+                        </button>
+                    </div>
+                    <input type="hidden" id="userType" name="userType" value="student" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="@slu.edu.ph" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="button" class="login-button">Create Account</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Already have an account? <a href="#" class="signup-link" id="loginLink">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="../html/javascript/navigation.js"></script>
+</html>

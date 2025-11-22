@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty View Rooms</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/res/sluLogo.svg" alt="SLU Logo" class="logo">
+                <span class="logo-text">TRIL Lab Reservation</span>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" data-page="dashboard">
+                    Dashboard
+                </button>
+                <button class="nav-btn active" data-page="viewRooms">
+                    View Rooms
+                </button>
+            </div>
+
+            <div class="nav-profile">
+                <div class="user-info">
+                    <span class="user-name">Prof. Anne</span>
+                    <span class="user-role">Faculty</span>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile-icon" id="profileIcon">👤</div>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <button id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="view-rooms-main">
+        <div class="view-rooms-content">
+            <div class="page-header">
+                <h1>Room Schedule</h1>
+                <p>Select a room to view reserved time slots</p>
+            </div>
+
+            <div class="rooms-section" id="roomsSection">
+                <div class="rooms-grid" id="roomsGrid">
+                </div>
+            </div>
+
+            <div class="calendar-section" id="calendarSection" style="display: none;">
+                <div class="selected-room-header">
+                    <button class="back-to-rooms-btn" id="backToRoomsBtn">← Back to Rooms</button>
+                    <h2>Schedule for <span id="selectedRoomName">Room Name</span></h2>
+                </div>
+
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <button class="calendar-nav-btn" id="prevMonth">←</button>
+                        <span class="current-month" id="currentMonth">December 2024</span>
+                        <button class="calendar-nav-btn" id="nextMonth">→</button>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-grid" id="calendarGrid">
+                    </div>
+                </div>
+
+                <div class="selected-date-info" id="selectedDateInfo" style="display: none;">
+                    <h3>Reserved Time Slots for <span id="selectedDateDisplay"></span></h3>
+                    <p class="date-subtitle">in <span id="selectedRoomDisplay"></span></p>
+                </div>
+
+                <div id="timeSlotsContainer">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../javascript/facultyViewRooms.js"></script>
+    <script src="../javascript/navigation.js"></script>
+</body>
+</html>
