@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body style="background-color: rgb(246, 246, 246);">
+   <nav class="dashboard-nav">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="/res/sluLogo.svg" alt="SLU Logo" class="logo">
+            <span class="logo-text">TRIL Lab Reservation</span>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-page="dashboard">
+                Dashboard
+            </button>
+            <button class="nav-btn" data-page="viewRooms">
+                 View Rooms
+            </button>
+        </div>
+
+        <div class="nav-profile">
+            <div class="user-info">
+                <span class="user-name">Prof. Anne</span>
+                <span class="user-role">Faculty</span>
+            </div>
+            <div class="profile-dropdown">
+                <div class="profile-icon" id="profileIcon">👤</div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main class="dashboard-main">
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h1>Faculty Dashboard</h1>
+                <p>Welcome back!</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <p class="stat-number">5</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Approved Today</h3>
+                    <p class="stat-number">3</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Total Approved</h3>
+                    <p class="stat-number">24</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Rejected Requests</h3>
+                    <p class="stat-number">2</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Pending Approval Requests</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                
+                <div class="reservations-table-container">
+                    <table class="reservations-table">
+                        <thead>
+                            <tr>
+                                <th>Requester</th>
+                                <th>Room</th>
+                                <th>Purpose</th>
+                                <th>Date & Time</th>
+                                <th>Participants</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">John Smith</span>
+                                        <span class="user-id">2024-12345</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D420</span>
+                                    </div>
+                                </td>
+                                <td>Group Project</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 12, 2024</span>
+                                        <span class="time">2:00 PM - 4:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>15</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="approve-btn">Approve</button>
+                                        <button class="reject-btn">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">Maria Garcia</span>
+                                        <span class="user-id">2024-12346</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D421</span>
+                                    </div>
+                                </td>
+                                <td>Research Project</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 13, 2024</span>
+                                        <span class="time">9:00 AM - 11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td>8</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="approve-btn">Approve</button>
+                                        <button class="reject-btn">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">David Chen</span>
+                                        <span class="user-id">2024-12347</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D422</span>
+                                    </div>
+                                </td>
+                                <td>Group Study</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 15, 2024</span>
+                                        <span class="time">1:00 PM - 3:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>12</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="approve-btn">Approve</button>
+                                        <button class="reject-btn">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">Sarah Johnson</span>
+                                        <span class="user-id">2024-12348</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D423</span>
+                                    </div>
+                                </td>
+                                <td>Thesis Work</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 16, 2024</span>
+                                        <span class="time">10:00 AM - 12:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>4</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="approve-btn">Approve</button>
+                                        <button class="reject-btn">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Approval History</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                
+                <div class="reservations-table-container">
+                    <table class="reservations-table">
+                        <thead>
+                            <tr>
+                                <th>Requester</th>
+                                <th>Room</th>
+                                <th>Purpose</th>
+                                <th>Date & Time</th>
+                                <th>Participants</th>
+                                <th>Status</th>
+                                <th>Action Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">Michael Brown</span>
+                                        <span class="user-id">2024-12349</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D420</span>
+                                    </div>
+                                </td>
+                                <td>Workshop</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 10, 2024</span>
+                                        <span class="time">9:00 AM - 11:00 AM</span>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>Dec 9, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">Emily Wilson</span>
+                                        <span class="user-id">2024-12350</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D421</span>
+                                    </div>
+                                </td>
+                                <td>Research</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 11, 2024</span>
+                                        <span class="time">2:00 PM - 4:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>6</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>Dec 10, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">James Lee</span>
+                                        <span class="user-id">2024-12351</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D424</span>
+                                    </div>
+                                </td>
+                                <td>Class Project</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 12, 2024</span>
+                                        <span class="time">1:00 PM - 3:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>18</td>
+                                <td><span class="status rejected">Rejected</span></td>
+                                <td>Dec 11, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-small">
+                                        <span class="user-name">Lisa Anderson</span>
+                                        <span class="user-id">2024-12352</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room-info">
+                                        <span class="room-name">D422</span>
+                                    </div>
+                                </td>
+                                <td>Group Study</td>
+                                <td>
+                                    <div class="datetime-info">
+                                        <span class="date">Dec 14, 2024</span>
+                                        <span class="time">10:00 AM - 12:00 PM</span>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>Dec 13, 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/html/javascript/navigation.js"></script>
+</body>
+</html>
